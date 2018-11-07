@@ -15,16 +15,27 @@
 
 /* HTML Styles */
 html {
-    background: url('sd_back1.png') 100%;
+    /* Sets the html background to the sd_back1.png */
+    background: url('sd_back1.png');
+    /* Sets the background attachment to fixed so it won't scroll with the page. */
     background-attachment: fixed;
+    /* Sets the background size to 100% */
     background-size: 100%;
 }
 
 
 /* Body Styles */
 body {
-    background: url('sd_back2.png'), radial-gradient(closest-corner at 40% 70%, white 15%, rgba(151, 151, 151, 0.5) 50%), radial-gradient(closest-corner at 80% 40%, white 15%, rgba(0, 0, 0, 0) 30%), radial-gradient(closest-side at 10% 20%, white 20%, rgba(0, 0, 0, 0) 45%), radial-gradient(5% 5% at 90% 10%, white 15%, rgba(0, 0, 0, 0) 40%), rgb(151, 151, 151);
+    /* Sets the background to an image of sd_back2 and 4 gradient circles. At the end another color is also added. */
+    background: url('sd_back2.png'),
+        radial-gradient(circle closest-corner at 40% 70%, white 15%, rgba(151, 151, 151, 0.5) 50%),
+        radial-gradient(circle closest-corner at 80% 40%, white 15%, rgba(0, 0, 0, 0) 30%),
+        radial-gradient(closest-side at 10% 20%, white 20%, rgba(0, 0, 0, 0) 45%),
+        radial-gradient(5% 5% at 90% 10%, white 15%, rgba(0, 0, 0, 0) 40%),
+        rgb(151, 151, 151);
+    /* FIX BUG HERE */
 
+    /* Sets the box shadow of the body so that it looks like the page fades on both sides. */
     box-shadow: rgb(31, 31, 31) 30px 0px 45px, rgb(31, 31, 31) -30px 0px 45px;
 }
 
@@ -32,6 +43,7 @@ body {
 
 /* Navigation List Styles */
 body>header a {
+    /* Added a border around all of the header buttons. */
     border: 5px outset rgb(211, 211, 255);
 }
 
@@ -39,17 +51,22 @@ body>header a {
 
 /* Section Left Styles */
 section#left article h1 {
+    /* Sets the text color of h1s to a light gray / white color. */
     color: rgb(211, 211, 211);
+    /* Adds a text shadow so it looks like the text is floating. It has a blur of 5 pixels. */
     text-shadow: black 0px 0px 5px;
 }
 
 section#left img#mportrait {
+    /* A filter to set the image in the bottom left to gray and slightly opaque. Progressive enhnacement is used. */
     -webkit-filter: drop-shadow(-15px 5px rgba(51, 51, 51, 0.9)) grayscale(0.7) opacity(0.6);
     filter: drop-shadow(-15px 5px rgba(51, 51, 51, 0.9)) grayscale(0.7) opacity(0.6);
+    /* Rotates the image 180 degrees to flip it to the right. */
     transform: rotateY(180deg);
 }
 
 /* Footer Styles */
 footer {
+    /* Sets the top border of the footer to a 2 pixel gray line. */
     border-top: 2px solid rgb(171, 171, 171);
 }
